@@ -20,6 +20,13 @@ import { RequestsProvider } from '../providers/requests/requests';
 import { ChatProvider } from '../providers/chat/chat';
 import { GroupsProvider } from '../providers/groups/groups';
 
+declare var window;
+
+export class MyErrorHandler implements ErrorHandler {
+  handleError(err: any): void {
+    window.Ionic.handleNewError(err);
+  }
+}
 
 @NgModule({
   declarations: [
@@ -40,7 +47,8 @@ import { GroupsProvider } from '../providers/groups/groups';
     File,
     FilePath,
     FileChooser,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    //{provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: ErrorHandler, useClass: MyErrorHandler },
     AuthProvider,
     AngularFireAuth,
     UserProvider,
