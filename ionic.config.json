@@ -1,6 +1,6 @@
 {
-  "name": "ionic3chat",
-  "app_id": "",
+  "name": "attme-chat",
+  "app_id": "c0e2116c",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
