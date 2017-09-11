@@ -4,12 +4,7 @@ import { UserProvider } from '../../providers/user/user';
 import { RequestsProvider } from '../../providers/requests/requests';
 import { connreq } from '../../models/interfaces/request';
 import firebase from 'firebase';
-/**
- * Generated class for the BuddiesPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-buddies',
@@ -58,7 +53,7 @@ export class BuddiesPage {
         subTitle: 'Your request was sent to ' + recipient.displayName,
         buttons: ['ok']
       });
-    
+
       this.requestservice.sendrequest(this.newrequest).then((res: any) => {
         if (res.success) {
           successalert.present();

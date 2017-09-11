@@ -2,12 +2,7 @@ import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
-/**
- * Generated class for the ProfilepicPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-profilepic',

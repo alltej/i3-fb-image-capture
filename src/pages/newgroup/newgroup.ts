@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController, LoadingController
 import { GroupsProvider } from '../../providers/groups/groups';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 
-/**
- * Generated class for the NewgroupPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-newgroup',
@@ -44,12 +39,12 @@ export class NewgroupPage {
       this.imghandler.grouppicstore(this.newgroup.groupName).then((res: any) => {
         loader.dismiss();
         if(res)
-          this.newgroup.groupPic = res;  
+          this.newgroup.groupPic = res;
       }).catch((err) => {
         alert(err);
       })
     }
-    
+
   }
 
   creategroup() {

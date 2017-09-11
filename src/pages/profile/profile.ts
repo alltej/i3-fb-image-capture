@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
 import firebase from 'firebase';
-/**
- * Generated class for the ProfilePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -47,8 +42,8 @@ export class ProfilePage {
           statusalert.present();
           this.zone.run(() => {
           this.avatar = url;
-        })  
-        }  
+        })
+        }
       }).catch((err) => {
           statusalert.setTitle('Failed');
           statusalert.setSubTitle('Your profile pic was not changed');
@@ -93,11 +88,11 @@ export class ProfilePage {
                 statusalert.setSubTitle('Your nickname was not changed');
                 statusalert.present();
               }
-                             
+
             })
           }
         }
-        
+
       }]
     });
     alert.present();

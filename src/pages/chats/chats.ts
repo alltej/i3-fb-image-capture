@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams, Events, AlertController } from 'io
 import { RequestsProvider } from '../../providers/requests/requests';
 import { ChatProvider } from '../../providers/chat/chat';
 
-/**
- * Generated class for the ChatsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-chats',
@@ -32,7 +27,7 @@ export class ChatsPage {
     })
     this.events.subscribe('friends', () => {
       this.myfriends = [];
-      this.myfriends = this.requestservice.myfriends; 
+      this.myfriends = this.requestservice.myfriends;
     })
   }
 
@@ -48,7 +43,7 @@ export class ChatsPage {
 
   accept(item) {
     this.requestservice.acceptrequest(item).then(() => {
-      
+
       let newalert = this.alertCtrl.create({
         title: 'Friend added',
         subTitle: 'Tap on the friend to chat with him',

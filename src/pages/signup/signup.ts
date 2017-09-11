@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { UserProvider } from '../../providers/user/user';
-/**
- * Generated class for the SignupPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-signup',
@@ -48,7 +43,7 @@ export class SignupPage {
           alert('Error' + res);
       })
     }
-  }  
+  }
 
   goback() {
     this.navCtrl.setRoot('LoginPage');

@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams, Events, Content, LoadingController
 import { ChatProvider } from '../../providers/chat/chat';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import firebase from 'firebase';
-/**
- * Generated class for the BuddychatPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-buddychat',
@@ -39,8 +34,8 @@ export class BuddychatPage {
             this.imgornot.push(false);
         }
       })
-      
-      
+
+
     })
   }
 
@@ -78,8 +73,8 @@ export class BuddychatPage {
     })
   }
 
-  
 
-  
+
+
 
 }
